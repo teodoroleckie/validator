@@ -1,7 +1,6 @@
 # validator (bool, int, float, number, string, email, uri)
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/teodoroleckie/validator/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/teodoroleckie/validator/?branch=main)
-[![Code Coverage](https://scrutinizer-ci.com/g/teodoroleckie/validator/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/teodoroleckie/validator/?branch=main)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/teodoroleckie/validator/badges/code-intelligence.svg?b=main)](https://scrutinizer-ci.com/code-intelligence)
 [![Build Status](https://scrutinizer-ci.com/g/teodoroleckie/validator/badges/build.png?b=main)](https://scrutinizer-ci.com/g/teodoroleckie/validator/build-status/main)
 
