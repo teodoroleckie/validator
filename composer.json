@@ -1,7 +1,7 @@
 {
   "name": "tleckie/validator",
   "license": "MIT",
-  "description": "PHP validators",
+  "description": "PHP validator (bool, int, float, number, string, email, uri)",
   "type": "library",
   "homepage": "https://github.com/teodoroleckie/validator",
   "authors": [
@@ -13,8 +13,8 @@
   "keywords": [
     "tleckie",
     "enum",
-    "php-enum",
-    "enumerator",
+    "php-validator",
+    "validation",
     "php",
     "php-8"
   ],

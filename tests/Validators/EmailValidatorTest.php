@@ -37,6 +37,7 @@ class EmailValidatorTest extends TestCase
             ['name.value@domain', false],
             ['name@domain.gov', true],
             ['nam\e@domain.gov', false],
+            [122222555, false],
         ];
     }
 }

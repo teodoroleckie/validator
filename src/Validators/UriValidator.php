@@ -32,6 +32,6 @@ class UriValidator implements ValidatorInterface
 
     public function isValid(mixed $toValidate): bool
     {
-        return (bool)preg_match($this->regex, $toValidate);
+        return (bool)preg_match($this->regex, (string)$toValidate);
     }
 }

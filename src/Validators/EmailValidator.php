@@ -25,6 +25,6 @@ class EmailValidator implements ValidatorInterface
      */
     public function isValid(mixed $toValidate): bool
     {
-        return (bool)preg_match($this->regx, $toValidate);
+        return (bool)preg_match($this->regx, (string)$toValidate);
     }
 }

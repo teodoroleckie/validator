@@ -21,7 +21,7 @@ class UriValidatorTest extends TestCase
      * @param string $value
      * @param bool   $valid
      */
-    public function check(string $value, bool $valid): void
+    public function check(mixed $value, bool $valid): void
     {
         $validator = new UriValidator();
         static::assertEquals($valid, $validator->isValid($value));
@@ -37,6 +37,7 @@ class UriValidatorTest extends TestCase
             ['www.test.com/path/', false],
             ['http://www.test.com/path/?var=true', true],
             ['http://\www.test.com/path/', false],
+            [123312, false],
         ];
     }
 }
