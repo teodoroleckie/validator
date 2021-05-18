@@ -21,11 +21,10 @@ class EmailValidatorTest extends TestCase
      * @param string $value
      * @param bool   $valid
      */
-    public function check(string $value, bool $valid): void
+    public function check(mixed $value, bool $valid): void
     {
-        $validator = new EmailValidator([Flag::DEFAULT()]);
+        $validator = new EmailValidator();
         static::assertEquals($valid, $validator->isValid($value));
-        static::assertInstanceOf(ValidatorInterface::class, $validator->addFlag(Flag::DEFAULT()));
     }
 
     /**

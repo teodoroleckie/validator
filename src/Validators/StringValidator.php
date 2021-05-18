@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Tleckie\Validator\Validators;
 
-
 use function is_string;
 
 /**

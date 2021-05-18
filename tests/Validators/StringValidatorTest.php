@@ -4,15 +4,16 @@ namespace Tleckie\Validator\Tests\Validators;
 
 use PHPUnit\Framework\TestCase;
 use Tleckie\Validator\Flag;
-use Tleckie\Validator\Validators\DomainValidator;
+use Tleckie\Validator\Validators\StringValidator;
+use Tleckie\Validator\Validators\ValidatorInterface;
 
 /**
- * Class DomainValidatorTest
+ * Class StringValidatorTest
  *
  * @package Tleckie\Validator\Tests\Validators
  * @author  Teodoro Leckie Westberg <teodoroleckie@gmail.com>
  */
-class DomainValidatorTest extends TestCase
+class StringValidatorTest extends TestCase
 {
     /**
      * @test
@@ -22,12 +23,7 @@ class DomainValidatorTest extends TestCase
      */
     public function check(mixed $value, bool $valid): void
     {
-        $validator = new DomainValidator();
-        //var_dump($validator->flags());
-
-        var_dump(Flag::FLAG_HOSTNAME());
-
-        static::assertSame($validator->flags()[0], Flag::FLAG_HOSTNAME());
+        $validator = new StringValidator();
         static::assertEquals($valid, $validator->isValid($value));
     }
 
@@ -37,12 +33,11 @@ class DomainValidatorTest extends TestCase
     public function checkDataProvider(): array
     {
         return [
-            ['mandrill._domainkey.mailchimp.com', false],
-            ['http://a-.bc.com', false],
-            ['http://toolongtoolongtoolongtoolongtoolongtoolongtoolongtoolongtoolongtoolong.com', false],
-            ['@local', false],
-            ['webserver.local', true],
-
+            ['name.value@domain.com', true],
+            ['12345679', true],
+            ['1235,5', true],
+            ['13246.200', true],
+            [13246, false],
         ];
     }
 }

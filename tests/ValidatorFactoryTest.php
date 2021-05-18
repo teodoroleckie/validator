@@ -7,13 +7,11 @@ namespace Tleckie\Validator\Tests;
 use PHPUnit\Framework\TestCase;
 use Tleckie\Validator\Factory\ValidatorFactoryInterface;
 use Tleckie\Validator\ValidatorFactory;
-use Tleckie\Validator\Validators\BooleanValidator;
-use Tleckie\Validator\Validators\DomainValidator;
+use Tleckie\Validator\Validators\BoolValidator;
 use Tleckie\Validator\Validators\EmailValidator;
 use Tleckie\Validator\Validators\FloatValidator;
 use Tleckie\Validator\Validators\IntValidator;
-use Tleckie\Validator\Validators\IpValidator;
-use Tleckie\Validator\Validators\UrlValidator;
+use Tleckie\Validator\Validators\UriValidator;
 
 /**
  * Class ValidatorFactoryTest
@@ -43,13 +41,11 @@ class ValidatorFactoryTest extends TestCase
     public function checkDataProvider(): array
     {
         return [
-            ['booleanValidator', BooleanValidator::class],
-            ['domainValidator', DomainValidator::class],
+            ['boolValidator', BoolValidator::class],
             ['emailValidator', EmailValidator::class],
             ['floatValidator', FloatValidator::class],
             ['intValidator', IntValidator::class],
-            ['ipValidator', IpValidator::class],
-            ['urlValidator', UrlValidator::class],
+            ['uriValidator', UriValidator::class],
         ];
     }
 

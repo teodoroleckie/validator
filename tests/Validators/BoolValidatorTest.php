@@ -3,16 +3,15 @@
 namespace Tleckie\Validator\Tests\Validators;
 
 use PHPUnit\Framework\TestCase;
-use Tleckie\Validator\Flag;
-use Tleckie\Validator\Validators\BooleanValidator;
+use Tleckie\Validator\Validators\BoolValidator;
 
 /**
- * Class BooleanValidatorTest
+ * Class BoolValidatorTest
  *
  * @package Tleckie\Validator\Tests\Validators
  * @author  Teodoro Leckie Westberg <teodoroleckie@gmail.com>
  */
-class BooleanValidatorTest extends TestCase
+class BoolValidatorTest extends TestCase
 {
     /**
      * @test
@@ -22,7 +21,7 @@ class BooleanValidatorTest extends TestCase
      */
     public function check(mixed $value, bool $valid): void
     {
-        $validator = new BooleanValidator();
+        $validator = new BoolValidator();
 
         static::assertEquals($valid, $validator->isValid($value));
     }
@@ -33,14 +32,14 @@ class BooleanValidatorTest extends TestCase
     public function checkDataProvider(): array
     {
         return [
-            ["1", true],
-            [1, true],
-            [0, true],
-            ["0", true],
+            ["1", false],
+            [1, false],
+            [0, false],
+            ["0", false],
             [false, true],
             [true, true],
-            ["true", true],
-            ["false", true],
+            ["true", false],
+            ["false", false],
             ["test", false],
         ];
     }

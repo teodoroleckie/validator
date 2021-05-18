@@ -4,16 +4,16 @@ namespace Tleckie\Validator\Tests\Validators;
 
 use PHPUnit\Framework\TestCase;
 use Tleckie\Validator\Flag;
-use Tleckie\Validator\Validators\UrlValidator;
+use Tleckie\Validator\Validators\UriValidator;
 use Tleckie\Validator\Validators\ValidatorInterface;
 
 /**
- * Class UrlValidatorTest
+ * Class UriValidatorTest
  *
  * @package Tleckie\Validator\Tests\Validators
  * @author  Teodoro Leckie Westberg <teodoroleckie@gmail.com>
  */
-class UrlValidatorTest extends TestCase
+class UriValidatorTest extends TestCase
 {
     /**
      * @test
@@ -23,9 +23,8 @@ class UrlValidatorTest extends TestCase
      */
     public function check(string $value, bool $valid): void
     {
-        $validator = new UrlValidator([Flag::DEFAULT()]);
+        $validator = new UriValidator();
         static::assertEquals($valid, $validator->isValid($value));
-        static::assertInstanceOf(ValidatorInterface::class, $validator->addFlag(Flag::DEFAULT()));
     }
 
     /**

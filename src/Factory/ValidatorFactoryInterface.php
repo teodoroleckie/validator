@@ -43,4 +43,9 @@ interface ValidatorFactoryInterface
      * @return ValidatorInterface
      */
     public function emailValidator(): ValidatorInterface;
+
+    /**
+     * @return ValidatorInterface
+     */
+    public function uriValidator(): ValidatorInterface;
 }

@@ -23,9 +23,8 @@ class IntValidatorTest extends TestCase
      */
     public function check(mixed $value, bool $valid): void
     {
-        $validator = new IntValidator([Flag::DEFAULT()]);
+        $validator = new IntValidator();
         static::assertEquals($valid, $validator->isValid($value));
-        static::assertInstanceOf(ValidatorInterface::class, $validator->addFlag(Flag::DEFAULT()));
     }
 
     /**
@@ -34,7 +33,7 @@ class IntValidatorTest extends TestCase
     public function checkDataProvider(): array
     {
         return [
-            ['12522', true],
+            ['12522', false],
             ['12.25', false],
             [8999, true],
             ['nam\e@domain.gov', false],

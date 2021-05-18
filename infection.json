@@ -8,11 +8,11 @@
     ]
   },
   "phpUnit": {
-    "configDir": ".\/tests\/",
-    "customPath": ".\/bin\/phpunit"
+    "configDir": "./tests/",
+    "customPath": "./bin/phpunit"
   },
   "logs": {
-    "text": ".\/infection-report"
+    "text": "./infection-report"
   },
   "mutators": {
     "@default": true

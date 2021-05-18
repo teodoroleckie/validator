@@ -10,6 +10,7 @@ use Tleckie\Validator\Validators\FloatValidator;
 use Tleckie\Validator\Validators\IntValidator;
 use Tleckie\Validator\Validators\NumericValidator;
 use Tleckie\Validator\Validators\StringValidator;
+use Tleckie\Validator\Validators\UriValidator;
 use Tleckie\Validator\Validators\ValidatorInterface;
 use Tleckie\Validator\Validators\EmailValidator;
 
@@ -67,5 +68,13 @@ class ValidatorFactory implements ValidatorFactoryInterface
     public function emailValidator(): ValidatorInterface
     {
         return new EmailValidator();
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function uriValidator(): ValidatorInterface
+    {
+        return new UriValidator();
     }
 }

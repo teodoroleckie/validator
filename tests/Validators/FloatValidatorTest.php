@@ -32,8 +32,8 @@ class FloatValidatorTest extends TestCase
     public function checkDataProvider(): array
     {
         return [
-            ['125.22', true],
-            [1225, true],
+            ['125.22', false],
+            [1225, false],
             [89.99, true],
             ['nam\e@domain.gov', false],
         ];
